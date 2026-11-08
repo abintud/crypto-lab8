@@ -2,16 +2,6 @@
 Lab 8 - Breaking Salted Hashes (Challenge Lab)
 Secure Communication and Cryptography - MACS H6014
 
-Case: the Garda recovered a MySQL dump of password hashes from
-www.exploringsecurity.com. The hashes are salted, with the same salt for
-every user. Clues from the case file:
-  * hashes are 40 hex chars  -> SHA-1
-  * JavaScript revealed the format  CommonHash($salt, $pass)  -> SHA1(salt + pass)
-  * the salt is "somewhere in our data (in this document)" -> the domain name
-  * passwords set AFTER May 2010 : alphanumeric, 5-7 chars
-  * passwords set BEFORE May 2010: digits only,  5-7 chars
-Use the Pass_modified date of each row to pick the right policy.
-
 Methods used:
   * digit accounts        -> brute force every 5-7 digit number
   * weak alpha accounts   -> dictionary of common passwords + the username
